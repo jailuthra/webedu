@@ -1,6 +1,6 @@
 # Web Edu
 
-A very simple MOOC platform in PHP
+A very simple MOOC platform in Python (Flask)
 
 ## Installation
 
@@ -14,34 +14,33 @@ Clone this repo
 
 Create the courses directory, and add some video lectures
 
-    $ mkdir -p courses/crypto
+    $ mkdir -p static/courses/crypto
 
-    $ mv ~/intro-lec.mp4 courses/crypto/1.mp4
+    $ mv ~/intro-lec.mp4 static/courses/crypto/1.mp4
 
 **Note:** The video lecture files should be named *integer*.mp4
 (or .webm or any HTML5 compatible video format)  
 They will be played in numerical order.
 
-Edit the `maps/courses.php` file to add a full course name corrsponding
+Edit the `courses.py` file to add a full course name corrsponding
 to the course's folder name.  
 For an example:
 
-```php
-<?php
-    $course_map = ['crypto' => 'Cryptography'];
-?>
+```python
+    course_map = ['crypto' : 'Cryptography'];
 ```
 
 ## Run
 
-You can run it locally using php5
+You can run it locally using flask
 
-    # php -S 127.0.0.1:80 -t .
+    # pip2 install flask
+    # python2 app.py
 
-The server should be up at the address 127.0.0.1 (or localhost)  
+The server should be up at the address 127.0.0.1:5000
 Try it out on a browser
 
-Alternatively you can host it up on any server that can run php code
+Alternatively you can host it up on any web server that can run flask
 
 Report any bugs or feature requests to /dev/null.
 Kidding, feel free to send a Pull Request ;)

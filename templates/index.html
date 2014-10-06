@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
 
-<?php
-    include 'map/courses.php';
-?>
-
 <html>
 
 <head>
@@ -22,14 +18,9 @@
     <h2>Available Courses</h2>
 
     <ol>
-<?php
-    $courses = glob('courses/*', GLOB_ONLYDIR);
-    foreach ($courses as $course) {
-        $course_id = pathinfo($course)['basename'];
-        $course_name = $course_map[$course_id];
-        echo "<li><a href='course.php?id=$course_id'>$course_name</a></li>\n";
-    }
-?>
+    {% for course_id, course_name in courses %}
+        <li><a href='{{ url_for('course', course_id=course_id) }}'>{{ course_name }}</a></li>
+    {% endfor %}
     </ol>
 
 </body>
