@@ -8,4 +8,4 @@ def update_lectures():
         vid_files = sorted(glob('static/courses/%s/*.mp4' % course_id))
         lectures = dict((n+1, str(x)) for n,x in enumerate(vid_files))
         course_lectures[course_id] = lectures
-        return course_lectures
+    return course_lectures
