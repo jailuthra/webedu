@@ -1,3 +1,8 @@
+# This file is a part of webedu project, available under MIT license
+# See LICENSE.md file for details
+#
+# Copyright (C) 2014 Jai Luthra <me@jailuthra.in>
+
 from glob import glob
 
 course_map = {'course_folder_name' : 'Full Course Name'}
