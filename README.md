@@ -18,16 +18,17 @@ Create the courses directory, and add some video lectures
 
     $ mv ~/intro-lec.mp4 static/courses/crypto/1.mp4
 
-**Note:** The video lecture files should be named *integer*.mp4
-(or .webm or any HTML5 compatible video format)  
-They will be played in numerical order.
+**Note:** The video lecture files should theoretically be named in
+a way such that their play order syncs with the alphabetical listing
+of the files in the directory. Best way to ensure that is to name them
+numerically.
 
 Edit the `courses.py` file to add a full course name corrsponding
 to the course's folder name.  
 For an example:
 
 ```python
-    course_map = ['crypto' : 'Cryptography'];
+    course_map = {'crypto' : 'Cryptography'};
 ```
 
 ## Run
@@ -47,9 +48,14 @@ Kidding, feel free to send a Pull Request ;)
 
 ## Todo
 
-* Add CSS. Make a separate css/ directory
+In order of decreasing priority:
+
+* Improve code structure. Seperate out the data and the view (MVC maybe)
+* A page for uploading videos and creating new courses. The current
+  mechanism of expecting the teacher to do shell magic is sub-optimal
+* Beautify the app. Make a separate css/ directory
 * Improve navigation (Perhaps a navbar at the top would do)
-* Student login support (Using OAuth 2.0)
+* Login page for students and teachers
 
 ## License
 
