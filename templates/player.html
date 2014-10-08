@@ -43,11 +43,18 @@ Copyright (C) 2014 Jai Luthra <me@jailuthra.in>
 </head>
 
 <body>
-    <h3 style="text-align:center;">Lecture {{ lec_no }}</h3>
-    <h2 style="text-align:center;">{{ course_name }}</h2>
+    <h3 style="text-align:center;">Lecture {{ args["lec_no"] }}</h3>
+    <h2 style="text-align:center;">{{ args["course_name"] }}</h2>
     <div id='player'>
-        <video width='100%' src='/{{ lec_path }}' controls autoplay>
+        <video width='100%' src='/{{ args["lec_path"] }}' controls autoplay>
         </video>
+        <div id='controls'>
+        {% if args["lec_no"] > 1 %}
+            <a href='{{ url_for("player", course_id = args["course_id"], lec_no = args["lec_no"] - 1) }}' class='navbutton' id='prev_button'>&larr; Previous</a>
+        {% endif %}
+        {% if args["lec_no"] < args["total_lectures"] %}
+            <a href='{{ url_for("player", course_id = args["course_id"], lec_no = args["lec_no"] + 1) }}' class='navbutton' id='next_button'>&rarr; Next</a>
+        {% endif %}
     </div>
 
 </body>
