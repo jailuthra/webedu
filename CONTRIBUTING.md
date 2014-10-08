@@ -4,6 +4,7 @@ Hi there! Want to contribute to this project and achieve ultimate glory?
 Good. Just follow the steps below and start hacking :wink:
 
 * Fork this repository
+
 * Clone the fork to your computer
 
     ```
@@ -28,11 +29,15 @@ Good. Just follow the steps below and start hacking :wink:
     $ # It should fetch all the dependencies
     ```
     
-* Read the **TODO** section in README.md to find something to work on
+* Checkout the issues and the **TODO** section in README.md to find something to
+  work on
+
 * Have something else in mind? Found a bug? Add an issue in the original repo
   before you start working
+
 * When you are done writing code make sure to add a copyright line in the file
   you worked on. But first read LICENSE.txt and be sure you agree with those terms
+
 * Test run your code
 
     ```
@@ -41,4 +46,5 @@ Good. Just follow the steps below and start hacking :wink:
     ```
     
 * Add a nice commit message and send in a pull request
-* Get it merged, and voila, you sir, are a webedu jedi now :smile:
+
+* Get it merged, and voila, you sir, are a webedu ninja now :smile:
