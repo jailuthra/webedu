@@ -1,5 +1,5 @@
 # This file is a part of webedu project, available under MIT license
-# See LICENSE.md file for details
+# See LICENSE.txt file for details
 #
 # Copyright (C) 2014 Jai Luthra <me@jailuthra.in>
 

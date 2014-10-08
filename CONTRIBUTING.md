@@ -32,7 +32,7 @@ Good. Just follow the steps below and start hacking :wink:
 * Have something else in mind? Found a bug? Add an issue in the original repo
   before you start working
 * When you are done writing code make sure to add a copyright line in the file
-  you worked on. But first read LICENSE.md and be sure you agree with those terms
+  you worked on. But first read LICENSE.txt and be sure you agree with those terms
 * Test run your code
 
     ```
