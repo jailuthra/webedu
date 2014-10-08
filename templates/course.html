@@ -10,15 +10,15 @@ Copyright (C) 2014 Jai Luthra <me@jailuthra.in>
 <html>
 
 <head>
-    <title>Web Edu - {{ course_name }}</title>
+    <title>Web Edu - {{ args["course_name"] }}</title>
 </head>
 
 <body>
-    <h1 id='course_name'>{{ course_name }}</h1>
+    <h1 id='course_name'>{{ args["course_name"] }}</h1>
     <h3>Lectures</h3>
     <ul id='lectures'>
-    {% for lec_no in lectures %}
-        <li><a href='{{ url_for('player', course_id = course_id, lec_no = lec_no) }}'>
+    {% for lec_no in args["lectures"] %}
+        <li><a href='{{ url_for('player', course_id = args["course_id"], lec_no = lec_no) }}'>
             Lecture {{ lec_no }}
         </a></li>
     {% endfor %}
